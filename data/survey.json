@@ -1,0 +1,137 @@
+{
+  "surveyNote": "Isi pertanyaan & jawaban di sini. Poin biasanya 50, 40, 30, 20, 10 (total 150). Urutkan dari jawaban paling sering muncul. Field aliases = ejaan alternatif yang tetap dianggap benar. PENTING: jangan pakai tanda kutip \" di dalam teks tanpa di-escape, dan format jawaban harus { \"text\": \"...\", \"points\": 50 }.",
+  "rounds": [
+    {
+      "id": "r1",
+      "question": "PEMAIN SEPAK BOLA\nPALING TERKENAL\nVERSI AI",
+      "answers": [
+        { "text": "CRISTIANO RONALDO", "points": 50, "aliases": ["cr7", "ronaldo", "bang dodo"] },
+        { "text": "LIONEL MESSI", "points": 40, "aliases": ["messi"] },
+        { "text": "DAVID BECKHAM", "points": 30, "aliases": ["beckham"] },
+        { "text": "NEYMAR JR.", "points": 20, "aliases": ["neymar"] },
+        { "text": "PELE", "points": 10, "aliases": ["pelé"] }
+      ]
+    },
+    {
+      "id": "r2",
+      "question": "KARAKTER SUPERHERO\nPALING TERKENAL\nVERSI AI",
+      "answers": [
+        { "text": "SPIDER-MAN", "points": 50, "aliases": ["spiderman", "spider man"] },
+        { "text": "BATMAN", "points": 40, "aliases": [] },
+        { "text": "IRON MAN", "points": 30, "aliases": ["ironman"] },
+        { "text": "SUPERMAN", "points": 20, "aliases": [] },
+        { "text": "CAPTAIN AMERICA", "points": 10, "aliases": ["cap", "captain america"] }
+      ]
+    },
+    {
+      "id": "r3",
+      "question": "NEGARA DESTINASI LIBURAN\nIMPIAN ORANG INDONESIA\nVERSI AI",
+      "answers": [
+        { "text": "JEPANG", "points": 50, "aliases": ["japan"] },
+        { "text": "KOREA SELATAN", "points": 40, "aliases": ["korea", "korsel"] },
+        { "text": "ARAB SAUDI", "points": 30, "aliases": ["mekkah", "madinah", "umroh", "haji"] },
+        { "text": "SINGAPURA", "points": 20, "aliases": ["singapore"] },
+        { "text": "SWISS", "points": 10, "aliases": ["switzerland"] }
+      ]
+    },
+    {
+      "id": "r4",
+      "question": "SUARA PENGGANGGU YANG SERING\nBOCOR PAS WFH / MEETING\nVERSI AI",
+      "answers": [
+        { "text": "TERIAKAN KURIR PAKET", "points": 50, "aliases": ["paket", "kurir", "pakettt"] },
+        { "text": "SUARA TUKANG JUALAN", "points": 40, "aliases": ["bakso", "sayur", "jualan"] },
+        { "text": "SUARA RENOVASI / BOR", "points": 30, "aliases": ["tukang", "bor", "renovasi", "ketok"] },
+        { "text": "SUARA PELIHARAAN", "points": 20, "aliases": ["kucing", "anjing", "meong"] },
+        { "text": "SUARA ANAK", "points": 10, "aliases": ["anak"] }
+      ]
+    },
+    {
+      "id": "r5",
+      "question": "KARAKTER KARTUN / ANIME\nPALING LEGENDARIS\nVERSI AI",
+      "answers": [
+        { "text": "DORAEMON", "points": 50, "aliases": [] },
+        { "text": "MICKEY MOUSE", "points": 40, "aliases": ["mickey"] },
+        { "text": "SPONGEBOB", "points": 30, "aliases": ["spongebob squarepants"] },
+        { "text": "PIKACHU", "points": 20, "aliases": ["pokemon"] },
+        { "text": "NARUTO", "points": 10, "aliases": [] }
+      ]
+    },
+    {
+      "id": "r6",
+      "question": "STYLE / PAKAIAN ANDALAN\nSAAT WFH\nVERSI AI",
+      "answers": [
+        { "text": "KAOS POLOS / SANTAI", "points": 50, "aliases": ["kaos", "kaos polos"] },
+        { "text": "ATASAN RAPI BAWAHAN KOLOR", "points": 40, "aliases": ["kemeja", "kolor", "celana kolor"] },
+        { "text": "BAJU TIDUR / PIYAMA", "points": 30, "aliases": ["piyama", "baju tidur"] },
+        { "text": "DASTER / SINGLET", "points": 20, "aliases": ["daster", "singlet"] },
+        { "text": "JAKET / HOODIE", "points": 10, "aliases": ["jaket", "hoodie"] }
+      ]
+    },
+    {
+      "id": "r7",
+      "question": "MUSISI / PENYANYI / GRUP\nDANGDUT PALING TERKENAL\nVERSI AI",
+      "answers": [
+        { "text": "RHOMA IRAMA", "points": 50, "aliases": ["rhoma"] },
+        { "text": "AYU TING TING", "points": 40, "aliases": ["ayu"] },
+        { "text": "INUL DARATISTA", "points": 30, "aliases": ["inul"] },
+        { "text": "DENNY CAKNAN", "points": 20, "aliases": ["denny"] },
+        { "text": "LESTI KEJORA", "points": 10, "aliases": ["lesti"] }
+      ]
+    },
+    {
+      "id": "r8",
+      "question": "AKTOR PRIA INDONESIA\nPALING TERKENAL\nVERSI AI",
+      "answers": [
+        { "text": "REZA RAHADIAN", "points": 50, "aliases": ["reza"] },
+        { "text": "NICHOLAS SAPUTRA", "points": 40, "aliases": ["nicholas", "nico"] },
+        { "text": "VINO G. BASTIAN", "points": 30, "aliases": ["vino"] },
+        { "text": "IQBAAL RAMADHAN", "points": 20, "aliases": ["iqbaal", "iqbal"] },
+        { "text": "JOE TASLIM", "points": 10, "aliases": ["joe"] }
+      ]
+    },
+    {
+      "id": "r9",
+      "question": "SESUATU YANG SERING DITEMUKAN\nDI DALAM JOK MOTOR\nVERSI AI",
+      "answers": [
+        { "text": "JAS HUJAN", "points": 50, "aliases": ["jas"] },
+        { "text": "KANEBO / LAP", "points": 40, "aliases": ["kanebo", "lap"] },
+        { "text": "SANDAL JEPIT CADANGAN", "points": 30, "aliases": ["sandal", "sandal jepit"] },
+        { "text": "STNK / SURAT / DOMPET", "points": 20, "aliases": ["stnk", "surat", "dompet"] },
+        { "text": "OBENG / TOOLKIT MOTOR", "points": 10, "aliases": ["obeng", "toolkit", "toolkit motor"] }
+      ]
+    },
+    {
+      "id": "r10",
+      "question": "REFLEKS SAAT MATI LAMPU\nVERSI AI",
+      "answers": [
+        { "text": "NYALAIN SENTER HP", "points": 50, "aliases": ["senter", "flashlight", "hp"] },
+        { "text": "CEK RUMAH TETANGGA", "points": 40, "aliases": ["tetangga", "luar rumah"] },
+        { "text": "STORY / CHAT GRUP", "points": 30, "aliases": ["story", "chat", "grup"] },
+        { "text": "CARI LILIN / SENTER", "points": 20, "aliases": ["lilin", "emergency"] },
+        { "text": "TERIAK SPONTAN", "points": 10, "aliases": ["teriak", "ehh", "yah"] }
+      ]
+    },
+    {
+      "id": "r11",
+      "question": "KEBIASAAN PAS FIRST DATE\nTATAP MUKA\nVERSI AI",
+      "answers": [
+        { "text": "BASA-BASI PERJALANAN", "points": 50, "aliases": ["macet", "naik apa", "basa basi"] },
+        { "text": "SALTING BENERIN DIRI", "points": 40, "aliases": ["salting", "rambut", "baju", "jilbab"] },
+        { "text": "PURA-PURA CEK HP", "points": 30, "aliases": ["cek hp", "hp", "scroll"] },
+        { "text": "SENYUM KIKUK", "points": 20, "aliases": ["senyum", "pandang"] },
+        { "text": "BINGUNG PILIH MENU", "points": 10, "aliases": ["menu", "pesan"] }
+      ]
+    },
+    {
+      "id": "r12",
+      "question": "EMOJI YANG PALING SERING\nDI-REACT DI SLACK\nVERSI AI",
+      "answers": [
+        { "text": "JEMPOL", "points": 50, "aliases": ["👍", "thumb", "jempol"] },
+        { "text": "SUNGKEM / PRAY", "points": 40, "aliases": ["🙏", "pray", "sungkem"] },
+        { "text": "KETAWA NANGIS", "points": 30, "aliases": ["😂", "🤣", "ketawa", "lol"] },
+        { "text": "API / FIRE", "points": 20, "aliases": ["🔥", "fire", "api"] },
+        { "text": "PUSING / MEWEK", "points": 10, "aliases": ["😭", "🤯", "nangis", "pusing"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family 100</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="team team-a" id="teamA">
+        <input
+          class="team-label-input"
+          id="nameA"
+          type="text"
+          value="TIM A"
+          maxlength="16"
+          aria-label="Nama Tim A"
+        />
+        <span class="team-score" id="scoreA">0</span>
+      </div>
+
+      <div class="brand">
+        <p class="round-chip"><span id="roundLabel">Ronde 1</span> · Poin <strong id="boardPoints">0</strong></p>
+        <p class="control-chip">Kontrol: <strong id="controlTeam">—</strong> · <span id="phaseBadge">Setup</span></p>
+      </div>
+
+      <div class="team team-b" id="teamB">
+        <input
+          class="team-label-input"
+          id="nameB"
+          type="text"
+          value="TIM B"
+          maxlength="16"
+          aria-label="Nama Tim B"
+        />
+        <span class="team-score" id="scoreB">0</span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="board-panel">
+        <div class="question" id="questionText">Memuat survey…</div>
+
+        <div class="board" id="answerBoard" aria-live="polite"></div>
+
+        <div class="board-actions">
+          <div class="strikes" id="strikes" aria-label="Kesalahan">
+            <span class="strike" data-n="1">X</span>
+            <span class="strike" data-n="2">X</span>
+            <span class="strike" data-n="3">X</span>
+          </div>
+          <button id="wrongBtn" type="button" class="btn-wrong" disabled>Salah</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="host-bar" id="hostBar">
+      <div class="setup-box" id="setupBox">
+        <button id="startBtn" type="button" class="btn-primary">Mulai</button>
+      </div>
+
+      <div class="actions" id="playActions">
+        <button id="faceOffA" type="button" class="btn-secondary" disabled>→ Tim A</button>
+        <button id="faceOffB" type="button" class="btn-secondary" disabled>→ Tim B</button>
+        <button id="stealBtn" type="button" class="btn-accent" disabled>Steal</button>
+        <button id="revealBtn" type="button" class="btn-ghost" disabled>Buka Semua</button>
+        <button id="nextRoundBtn" type="button" class="btn-primary" disabled>Ronde+</button>
+      </div>
+
+      <p class="status" id="statusText">Klik baris 1–5 jika benar. Tombol Salah jika meleset.</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" hidden aria-live="polite"></div>
+  <script src="app.js?v=6" type="module"></script>
+</body>
+</html>
