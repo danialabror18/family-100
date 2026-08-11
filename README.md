@@ -19,6 +19,7 @@ python3 -m http.server 5173
 - Hafalkan jawaban dari `data/survey.json` — **tidak ditampilkan di layar**
 - **Peserta benar** → klik baris nomor 1–5 di papan (atau keyboard `1`–`5`)
 - **Peserta salah** → tombol **Salah** di bawah papan (atau keyboard `X`)
+- Setelah 3 X: lawan bisa **Steal** (benar = dapat poin papan; salah = poin ke tim yang main) atau **Tidak Steal** (poin hangus, lanjut ronde)
 - Face-off / Steal / Ronde ada di bilah bawah
 - Cocok di-share screen: penonton hanya lihat papan, bukan daftar jawaban
 

@@ -31,6 +31,7 @@ const els = {
   faceOffA: document.getElementById("faceOffA"),
   faceOffB: document.getElementById("faceOffB"),
   stealBtn: document.getElementById("stealBtn"),
+  passStealBtn: document.getElementById("passStealBtn"),
   revealBtn: document.getElementById("revealBtn"),
   nextRoundBtn: document.getElementById("nextRoundBtn"),
   startBtn: document.getElementById("startBtn"),
@@ -194,7 +195,9 @@ function updateControls() {
   els.wrongBtn.disabled = !canHostAct();
   els.faceOffA.disabled = state.phase !== PHASE.FACEOFF;
   els.faceOffB.disabled = state.phase !== PHASE.FACEOFF;
-  els.stealBtn.disabled = !(state.phase === PHASE.PLAY && state.strikes >= 3);
+  const canStealChoice = state.phase === PHASE.PLAY && state.strikes >= 3;
+  els.stealBtn.disabled = !canStealChoice;
+  els.passStealBtn.disabled = !canStealChoice;
   els.revealBtn.disabled = !(playing || roundDone);
   els.nextRoundBtn.disabled = !(roundDone && hasMore);
 
@@ -217,6 +220,20 @@ function awardBoard(team) {
   state.phase = PHASE.ROUND_DONE;
   setStatus(`${state.names[team]} menang ronde. Poin masuk skor.`, { sticky: true });
   showToast(`${state.names[team]} +poin`);
+  renderBoard();
+}
+
+/** Lawan menolak steal: poin papan hangus, tidak masuk ke tim mana pun. */
+function forfeitBoard() {
+  const lost = state.boardPoints;
+  state.boardPoints = 0;
+  state.stealTeam = null;
+  state.phase = PHASE.ROUND_DONE;
+  setStatus(
+    `Tidak steal. Poin papan hangus (${lost}). Lanjut Ronde+.`,
+    { sticky: true }
+  );
+  showToast("Poin hangus");
   renderBoard();
 }
 
@@ -303,7 +320,7 @@ function handleWrong() {
   if (state.strikes >= 3) {
     const other = state.control === "A" ? "B" : "A";
     setStatus(
-      `3 X! Tekan Steal untuk ${state.names[other]}.`,
+      `3 X! ${state.names[other]}: Steal atau Tidak Steal (poin hangus).`,
       { sticky: true }
     );
   } else {
@@ -321,6 +338,11 @@ function startSteal() {
     { sticky: true }
   );
   renderBoard();
+}
+
+function passSteal() {
+  if (state.phase !== PHASE.PLAY || state.strikes < 3) return;
+  forfeitBoard();
 }
 
 function revealAll() {
@@ -408,6 +430,7 @@ function wireEvents() {
   els.faceOffA.addEventListener("click", () => beginPlay("A"));
   els.faceOffB.addEventListener("click", () => beginPlay("B"));
   els.stealBtn.addEventListener("click", startSteal);
+  els.passStealBtn.addEventListener("click", passSteal);
   els.revealBtn.addEventListener("click", revealAll);
   els.nextRoundBtn.addEventListener("click", nextRound);
 
