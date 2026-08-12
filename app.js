@@ -1,3 +1,5 @@
+const MAX_STRIKES = 2;
+
 const PHASE = {
   SETUP: "setup",
   FACEOFF: "faceoff",
@@ -195,7 +197,7 @@ function updateControls() {
   els.wrongBtn.disabled = !canHostAct();
   els.faceOffA.disabled = state.phase !== PHASE.FACEOFF;
   els.faceOffB.disabled = state.phase !== PHASE.FACEOFF;
-  const canStealChoice = state.phase === PHASE.PLAY && state.strikes >= 3;
+  const canStealChoice = state.phase === PHASE.PLAY && state.strikes >= MAX_STRIKES;
   els.stealBtn.disabled = !canStealChoice;
   els.passStealBtn.disabled = !canStealChoice;
   els.revealBtn.disabled = !(playing || roundDone);
@@ -315,22 +317,22 @@ function handleWrong() {
     return;
   }
 
-  state.strikes = Math.min(3, state.strikes + 1);
+  state.strikes = Math.min(MAX_STRIKES, state.strikes + 1);
   showToast("X");
-  if (state.strikes >= 3) {
+  if (state.strikes >= MAX_STRIKES) {
     const other = state.control === "A" ? "B" : "A";
     setStatus(
-      `3 X! ${state.names[other]}: Steal atau Tidak Steal (poin hangus).`,
+      `${MAX_STRIKES} X! ${state.names[other]}: Steal atau Tidak Steal (poin hangus).`,
       { sticky: true }
     );
   } else {
-    setStatus(`Salah ${state.strikes}/3`);
+    setStatus(`Salah ${state.strikes}/${MAX_STRIKES}`);
   }
   renderBoard();
 }
 
 function startSteal() {
-  if (state.phase !== PHASE.PLAY || state.strikes < 3) return;
+  if (state.phase !== PHASE.PLAY || state.strikes < MAX_STRIKES) return;
   state.stealTeam = state.control === "A" ? "B" : "A";
   state.phase = PHASE.STEAL;
   setStatus(
@@ -341,7 +343,7 @@ function startSteal() {
 }
 
 function passSteal() {
-  if (state.phase !== PHASE.PLAY || state.strikes < 3) return;
+  if (state.phase !== PHASE.PLAY || state.strikes < MAX_STRIKES) return;
   forfeitBoard();
 }
 
